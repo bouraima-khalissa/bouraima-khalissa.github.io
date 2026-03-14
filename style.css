@@ -71,15 +71,17 @@ body {
 }
 
 .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Rend la photo ronde */
-    object-fit: cover;
-    border: 5px solid var(--accent-color);
+    /* --- NOUVEAUX STYLES --- */
+    width: 180px;            /* Légèrement plus étroite pour le rectangle */
+    height: 240px;           /* Plus haute pour la forme rectangulaire (format portrait) */
+    border-radius: 15px;     /* Arrondit les coins du rectangle (pas trop pour garder la forme) */
+    border: 3px solid #000000; /* Le contour noir de 3 pixels */
+    /* ------------------------ */
+    
+    object-fit: cover;       /* Garde la photo bien cadrée sans la déformer */
     margin-bottom: 20px;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Une ombre douce pour le relief */
 }
-
 .profile-container h1 {
     font-size: 2.5rem;
     color: var(--primary-color);
