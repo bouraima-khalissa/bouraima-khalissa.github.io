@@ -1,13 +1,9 @@
 /* --- Styles de base et couleurs --- */
 :root {
-    --primary-color: #0A2540; /* Bleu marine très pro */
-    --accent-color: #00A8CC; /* Bleu cyan dynamique */
-    /* NOUVELLES COULEURS THÈME SOMBRE */
-    --bg-color: #000000; /* Fond noir pur */
-    --text-color: #E0E0E0; /* Gris très clair/blanc cassé pour le texte */
-    --card-bg: #1A1A1A;   /* Gris très foncé pour les cartes */
-    --card-text: #FFFFFF; /* Texte blanc pur à l'intérieur des cartes */
-    /* -------------------------------- */
+    --primary-color: #1a3a5a; /* Un bleu marine légèrement ajusté pour être visible sur le noir */
+    --bg-color: #000000;      /* Fond noir pur */
+    --text-color: #E0E0E0;    /* Gris très clair pour le confort de lecture */
+    --card-bg: #121212;       /* Gris très sombre pour les cartes */
 }
 
 * {
@@ -22,7 +18,7 @@ body {
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Permet au footer de rester en bas */
+    min-height: 100vh;
 }
 
 /* --- Bande supérieure --- */
@@ -32,8 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white; /* Texte blanc dans le header navy */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Ombre plus marquée sur fond sombre */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .home-btn {
@@ -41,29 +36,29 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s;
+    transition: opacity 0.3s;
 }
 
 .home-btn:hover {
-    color: var(--accent-color);
+    opacity: 0.8;
 }
 
 .iut-logo {
-    max-height: 50px; /* Adapte la taille selon ton logo */
-    background-color: white; /* Fond blanc au cas où le logo soit sombre */
+    max-height: 50px;
+    background-color: white;
     padding: 5px;
     border-radius: 5px;
 }
 
 /* --- Section Centrale --- */
 .hero-section {
-    flex: 1; /* Prend tout l'espace disponible au centre */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px;
-    gap: 60px;
-    max-width: 1300px; /* Légèrement élargi pour la plus grande photo */
+    gap: 80px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -74,32 +69,27 @@ body {
 }
 
 .profile-pic {
-    /* --- STYLES MODIFIÉS POUR PHOTO AGRANDIE ET THÈME SOMBRE --- */
-    width: 320px;            /* CONSIDÉRABLEMENT AGRANDIE */
-    height: 420px;           /* CONSIDÉRABLEMENT AGRANDIE (format portrait maintenu) */
-    border-radius: 15px;     /* Arrondit les coins */
-    border: 3px solid var(--accent-color); /* CONTOUR CYAN DYNAMIQUE (ressort mieux sur noir) */
-    /* --------------------------------------------------------- */
-    
-    object-fit: cover;       /* Garde la photo bien cadrée sans la déformer */
-    margin-bottom: 25px;     /* Légèrement plus d'espace */
-    box-shadow: 0 10px 25px rgba(0,168,204,0.2); /* Ombre cyan douce et plus marquée */
+    /* PHOTO AGRANDIE */
+    width: 320px;
+    height: 420px;
+    border-radius: 12px;
+    border: 4px solid var(--primary-color); /* Même bleu que le reste */
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(26, 58, 90, 0.3); /* Lueur subtile bleue */
 }
 
 .profile-container h1 {
-    font-size: 2.8rem; /* Légèrement plus grand pour aller avec la photo */
-    color: var(--accent-color); /* Changé en cyan pour plus de punch sur noir */
+    font-size: 3rem;
+    color: white;
     margin-bottom: 10px;
 }
 
 .profile-container h2 {
     font-size: 1.6rem;
-    color: white; /* Gris plus clair/blanc pour le sous-titre */
+    color: var(--primary-color); /* Titre en bleu marine */
+    font-weight: 600;
     margin-bottom: 15px;
-}
-
-.profile-container p {
-    color: var(--text-color); /* Texte global pour la description */
 }
 
 /* Droite : Catégories */
@@ -111,30 +101,29 @@ body {
 }
 
 .category-card {
-    background-color: var(--card-bg); /* Fond sombre pour la carte */
-    padding: 25px;
-    border-radius: 10px;
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
     text-decoration: none;
-    color: var(--card-text); /* Texte blanc dans la carte sombre */
-    border-left: 6px solid var(--primary-color);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* Ombre plus profonde */
-    transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
+    color: white;
+    border-left: 8px solid var(--primary-color); /* Bordure bleue distinctive */
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .category-card:hover {
-    transform: translateX(10px); /* Petit effet de glissement au survol */
-    border-color: var(--accent-color);
-    background-color: #252525; /* Légère illumination au survol */
+    transform: translateX(15px);
+    background-color: #1a1a1a;
 }
 
 .category-card h3 {
     font-size: 1.5rem;
     margin-bottom: 8px;
-    color: var(--accent-color); /* Titres des cartes en cyan pour ressortir */
+    color: var(--primary-color); /* Sous-titres en bleu marine */
 }
 
 .category-card p {
-    color: #CCCCCC; /* Texte de description légèrement gris */
+    color: #aaaaaa;
+    font-size: 0.95rem;
 }
 
 /* --- Bande inférieure --- */
@@ -142,41 +131,20 @@ body {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 25px; /* Légèrement plus de padding */
-    font-size: 0.95rem;
+    padding: 30px;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
-.footer-info {
-    margin-bottom: 10px;
-}
-
-.footer-info p {
-    margin-bottom: 5px;
-}
-
-.footer-links a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* --- Rendre le site joli sur téléphone --- */
-@media (max-width: 900px) { /* Seuil légèrement augmenté car photo plus grande */
+/* --- Mobile --- */
+@media (max-width: 900px) {
     .hero-section {
-        flex-direction: column; /* Empile la photo et les boutons sur mobile */
-        padding: 30px;
+        flex-direction: column;
+        padding: 40px 20px;
         gap: 40px;
     }
     .profile-pic {
-        width: 280px; /* Un peu plus petite sur mobile mais reste grande */
-        height: 380px;
-    }
-    .top-bar {
-        padding: 15px 20px;
+        width: 260px;
+        height: 340px;
     }
 }
