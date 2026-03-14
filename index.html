@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8" />
-		<title>PORTFOLIO Khalissa Bouraima</title>
-		<link rel="stylesheet" href="./style.css">
-		<link rel="icon" type="image/png" href="logo_iut.jpg">
-	<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Khalissa Bouraima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-		<header class="top-bar">
-			<div class="logo">
-				<img src="img/logo_iut.jpg" alt="Logo IUT" style="height: 40px;">
-			</div>
-			<nav>
-				<a href="#" class="btn-home">Accueil</a>
-			</nav>
-		</header>
+    <header class="top-bar">
+        <div class="left-header">
+            <a href="index.html" class="home-btn"> Accueil</a>
+        </div>
+        <div class="right-header">
+            <img src="logo-iut.png" alt="Logo de mon IUT" class="iut-logo">
+        </div>
+    </header>
 
-		<main class="container">
-			<section class="photo-area">
-				<div class="photo-card">
-					<span>Ma photo</span>
-				</div>
-			</section>
+    <main class="hero-section">
+        
+        <div class="profile-container">
+            <img src="ma-photo.jpg" alt="Photo de profil" class="profile-pic">
+            <h1>Khalissa Bouraima</h1>
+            <h2>Recherche une alternance en Développement</h2>
+            <p>Étudiante passionnée en BUT Informatique. Prête à apporter mes compétences à votre équipe !</p>
+        </div>
 
-			<aside class="sidebar">
-				<button class="btn-cylindrique">Me contacter</button>
-				<button class="btn-cylindrique">Présentation</button>
-				<button class="btn-cylindrique">Projets Informatiques</button>
-			</aside>
-		</main>
+        <nav class="nav-categories">
+            <a href="presentation.html" class="category-card">
+                <h3>Présentation</h3>
+                <p>Découvrez mon parcours et mes compétences.</p>
+            </a>
+            <a href="projets.html" class="category-card">
+                <h3> Mes projets informatiques</h3>
+                <p>Consultez mes réalisations et mon code.</p>
+            </a>
+            <a href="contact.html" class="category-card">
+                <h3>Me contacter</h3>
+                <p>Discutons de mon futur dans votre entreprise.</p>
+            </a>
+        </nav>
 
-		<footer class="bottom-bar">
-			<div class="footer-content">
-				<p>Portfolio entièrement réalisé par moi-même</p>
-				<p>IUT D'Orsay - 13 avenue des Sciences - 91190 Gif-sur-Yvette | FRANCE</p>
-			</div>
-		</footer>   
-	</body>
+    </main>
+
+    <footer class="bottom-bar">
+        <div class="footer-info">
+            <p>📍 <strong>IUT d'Orsay</strong> - 13 avenue des sciences - 91190 Gif-sur-Yvette</p>
+            <p>Mentions utiles : Permis B | Mobilité : Île-de-France | Rythme d'alternance : 2 jours en entreprise/3 jours à l'IUT</p>
+        </div>
+        <div class="footer-links">
+            <a href="[Ton lien GitHub]" target="_blank">Mon GitHub</a> |
+            <a href="[Ton lien LinkedIn]" target="_blank">Mon LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
 </html>
