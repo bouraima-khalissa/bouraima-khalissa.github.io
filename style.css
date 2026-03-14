@@ -2,9 +2,12 @@
 :root {
     --primary-color: #0A2540; /* Bleu marine très pro */
     --accent-color: #00A8CC; /* Bleu cyan dynamique */
-    --bg-color: #F8F9FA; /* Gris très clair, presque blanc */
-    --text-color: #333333;
-    --card-bg: #FFFFFF;
+    /* NOUVELLES COULEURS THÈME SOMBRE */
+    --bg-color: #000000; /* Fond noir pur */
+    --text-color: #E0E0E0; /* Gris très clair/blanc cassé pour le texte */
+    --card-bg: #1A1A1A;   /* Gris très foncé pour les cartes */
+    --card-text: #FFFFFF; /* Texte blanc pur à l'intérieur des cartes */
+    /* -------------------------------- */
 }
 
 * {
@@ -29,8 +32,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: white; /* Texte blanc dans le header navy */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Ombre plus marquée sur fond sombre */
 }
 
 .home-btn {
@@ -60,7 +63,7 @@ body {
     align-items: center;
     padding: 50px;
     gap: 60px;
-    max-width: 1200px;
+    max-width: 1300px; /* Légèrement élargi pour la plus grande photo */
     margin: 0 auto;
 }
 
@@ -71,27 +74,32 @@ body {
 }
 
 .profile-pic {
-    /* --- NOUVEAUX STYLES --- */
-    width: 180px;            /* Légèrement plus étroite pour le rectangle */
-    height: 240px;           /* Plus haute pour la forme rectangulaire (format portrait) */
-    border-radius: 15px;     /* Arrondit les coins du rectangle (pas trop pour garder la forme) */
-    border: 3px solid #000000; /* Le contour noir de 3 pixels */
-    /* ------------------------ */
+    /* --- STYLES MODIFIÉS POUR PHOTO AGRANDIE ET THÈME SOMBRE --- */
+    width: 320px;            /* CONSIDÉRABLEMENT AGRANDIE */
+    height: 420px;           /* CONSIDÉRABLEMENT AGRANDIE (format portrait maintenu) */
+    border-radius: 15px;     /* Arrondit les coins */
+    border: 3px solid var(--accent-color); /* CONTOUR CYAN DYNAMIQUE (ressort mieux sur noir) */
+    /* --------------------------------------------------------- */
     
     object-fit: cover;       /* Garde la photo bien cadrée sans la déformer */
-    margin-bottom: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Une ombre douce pour le relief */
+    margin-bottom: 25px;     /* Légèrement plus d'espace */
+    box-shadow: 0 10px 25px rgba(0,168,204,0.2); /* Ombre cyan douce et plus marquée */
 }
+
 .profile-container h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    font-size: 2.8rem; /* Légèrement plus grand pour aller avec la photo */
+    color: var(--accent-color); /* Changé en cyan pour plus de punch sur noir */
     margin-bottom: 10px;
 }
 
 .profile-container h2 {
-    font-size: 1.5rem;
-    color: var(--accent-color);
+    font-size: 1.6rem;
+    color: white; /* Gris plus clair/blanc pour le sous-titre */
     margin-bottom: 15px;
+}
+
+.profile-container p {
+    color: var(--text-color); /* Texte global pour la description */
 }
 
 /* Droite : Catégories */
@@ -103,25 +111,30 @@ body {
 }
 
 .category-card {
-    background-color: var(--card-bg);
+    background-color: var(--card-bg); /* Fond sombre pour la carte */
     padding: 25px;
     border-radius: 10px;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--card-text); /* Texte blanc dans la carte sombre */
     border-left: 6px solid var(--primary-color);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* Ombre plus profonde */
+    transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
 }
 
 .category-card:hover {
     transform: translateX(10px); /* Petit effet de glissement au survol */
     border-color: var(--accent-color);
+    background-color: #252525; /* Légère illumination au survol */
 }
 
 .category-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 8px;
-    color: var(--primary-color);
+    color: var(--accent-color); /* Titres des cartes en cyan pour ressortir */
+}
+
+.category-card p {
+    color: #CCCCCC; /* Texte de description légèrement gris */
 }
 
 /* --- Bande inférieure --- */
@@ -129,12 +142,16 @@ body {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
+    padding: 25px; /* Légèrement plus de padding */
+    font-size: 0.95rem;
 }
 
 .footer-info {
     margin-bottom: 10px;
+}
+
+.footer-info p {
+    margin-bottom: 5px;
 }
 
 .footer-links a {
@@ -149,11 +166,15 @@ body {
 }
 
 /* --- Rendre le site joli sur téléphone --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) { /* Seuil légèrement augmenté car photo plus grande */
     .hero-section {
         flex-direction: column; /* Empile la photo et les boutons sur mobile */
-        padding: 20px;
+        padding: 30px;
         gap: 40px;
+    }
+    .profile-pic {
+        width: 280px; /* Un peu plus petite sur mobile mais reste grande */
+        height: 380px;
     }
     .top-bar {
         padding: 15px 20px;
