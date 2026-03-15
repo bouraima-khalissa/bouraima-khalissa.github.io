@@ -24,41 +24,51 @@ body {
 }
 
 /* --- Bandes (Haut et Bas identiques) --- */
-.top-bar, .bottom-bar {
-    background-color: var(--primary-color);
-    color: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+/* --- BANDES (Top & Bottom) --- */
+.top-bar, .bottom-bar { 
+    background-color: var(--primary-color); 
+    color: white; 
 }
 
 .top-bar {
-    padding: 10px 60px;
+    padding: 15px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-.bottom-bar {
-    padding: 20px;
-    text-align: center;
-    font-size: 0.85rem;
-    margin-top: auto; /* Pousse le footer en bas si le contenu est court */
+.bottom-bar { 
+    padding: 25px; 
+    text-align: center; 
+    font-size: 0.85rem; 
+    margin-top: auto; 
 }
 
-.iut-logo {
-    max-height: 45px;
-    background-color: white;
-    padding: 4px;
-    border-radius: 4px;
+.iut-logo { 
+    max-height: 45px; 
+    background-color: white; 
+    padding: 4px; 
+    border-radius: 4px; 
 }
 
-.home-btn {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+.home-btn { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600; 
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: var(--transition);
 }
+
+.home-btn:hover {
+    background: white;
+    color: var(--primary-color);
+} 
 
 /* --- Section Héro --- */
 .hero-section {
