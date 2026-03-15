@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation | Khalissa Bouraima</title>
+    <link rel="icon" type="image/jpg" href="IMG.jpg"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="left-header">
+            <img src="logo-iut.jpg" alt="Logo de mon IUT" class="iut-logo">
+        </div>
+        <div class="right-header">
+            <a href="index.html" class="home-btn">Accueil</a>
+        </div>
+    </header>
+
+    <main class="presentation-content">
+        
+        <section class="section-presentation">
+            <h2 class="section-title">Présentation Vidéo</h2>
+            <div class="video-container">
+                <video controls poster="miniature-video.jpg">
+                    <source src="ma-video.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+        </section>
+
+        <hr class="separator">
+
+        <section class="section-presentation">
+            <h2 class="section-title">Mon Parcours Académique</h2>
+            
+            <div class="academic-timeline">
+                <div class="timeline-item">
+                    <h3>Baccalauréat Général</h3>
+                    <p>Spécialités Mathématiques, Physique-Chimie et option Maths Expertes.</p>
+                    <div class="image-grid">
+                        <img src="bac-photo1.jpg" alt="Photo Bac 1">
+                        <img src="bac-photo2.jpg" alt="Photo Bac 2">
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>BUT Mesures Physiques (1ère année)</h3>
+                    <p>Une année enrichissante qui m'a permis d'acquérir une grande rigueur scientifique et une approche concrète de la technique.</p>
+                    <div class="image-grid">
+                        <img src="mp-photo1.jpg" alt="Photo BUT MP">
+                    </div>
+                </div>
+
+                <div class="timeline-item current">
+                    <h3>BUT Informatique (Actuel)</h3>
+                    <p>Université Paris-Saclay, IUT d'Orsay. Approfondissement du développement logiciel et web.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separator">
+
+        <section class="section-presentation">
+            <h2 class="section-title">Centres d'intérêt & Engagement</h2>
+
+            <div class="interest-block">
+                <div class="interest-img">
+                    <img src="tennis.jpg" alt="Khalissa jouant au tennis">
+                </div>
+                <div class="interest-text">
+                    <h3>Le Tennis</h3>
+                    <p>Pratiquer le tennis m'a appris la persévérance et la gestion du stress. C'est un sport qui demande une analyse rapide de la situation et une grande discipline mentale, des qualités que je transpose quotidiennement dans mes projets de programmation.</p>
+                </div>
+            </div>
+
+            <div class="interest-block reverse">
+                <div class="interest-img">
+                    <img src="literature.jpg" alt="Littérature anglophone">
+                </div>
+                <div class="interest-text">
+                    <h3>Littérature Anglophone</h3>
+                    <p>Passionnée par les auteurs anglophones, cette pratique me permet de perfectionner mon anglais tout en explorant des structures de pensée différentes. Cela nourrit ma curiosité et ma capacité à comprendre des documentations techniques complexes en anglais.</p>
+                </div>
+            </div>
+
+            <div class="interest-block">
+                <div class="interest-img">
+                    <img src="association.jpg" alt="Vie associative">
+                </div>
+                <div class="interest-text">
+                    <h3>Engagement Associatif & Coaching</h3>
+                    <p>À travers mon implication aux <strong>Restos du Cœur</strong> et au sein de l'association <strong>"Les Chelles de l'espoir"</strong> à Chelles, j'ai développé mon sens du contact et de l'organisation. Mon expérience en tant que <strong>coach sportif au foot</strong> m'a également appris à transmettre des savoirs, à animer une équipe et à prendre des responsabilités.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bottom-bar">
+        <div class="footer-info">
+            <p>IUT d'Orsay - 13 avenue des sciences - 91190 Gif-sur-Yvette</p>
+            <p>Permis B <strong>|</strong> Mobilité : Île-de-France <strong>|</strong> Rythme : 2 jours entreprise / 3 jours IUT</p>
+        </div>
+    </footer>
+
+</body>
+</html>
