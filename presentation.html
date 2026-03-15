@@ -1,4 +1,25 @@
-<main class="presentation-content">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation | Khalissa Bouraima</title>
+    <link rel="icon" type="image/jpg" href="IMG.jpg"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="left-header">
+            <img src="logo-iut.jpg" alt="Logo de mon IUT" class="iut-logo">
+        </div>
+        <div class="right-header">
+            <a href="index.html" class="home-btn">Accueil</a>
+        </div>
+    </header>
+
+    <main class="presentation-content">
         
         <section class="section-presentation">
             <h2 class="section-title">Présentation Vidéo</h2>
@@ -13,32 +34,29 @@
 
         <section class="section-presentation">
             <h2 class="section-title">Mon Parcours Académique</h2>
-            
             <div class="academic-timeline">
                 <div class="timeline-item">
                     <h3>Baccalauréat Général</h3>
-                    <p>Spécialités Mathématiques, Physique-Chimie et option Maths Expertes.</p>
+                    <p>Maths, Physique-Chimie et option Maths Expertes.</p>
                     <div class="image-grid">
-                        <img src="bac-1.jpg" alt="Bac Photo 1">
-                        <img src="bac-2.jpg" alt="Bac Photo 2">
+                        <img src="bac-1.jpg" alt="Bac 1">
+                        <img src="bac-2.jpg" alt="Bac 2">
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <h3>BUT Mesures Physiques (1ère année)</h3>
-                    <p>Acquisition d'une grande rigueur scientifique et approche concrète de la technique.</p>
+                    <p>Une année très appréciée pour sa rigueur technique.</p>
                     <div class="image-grid">
-                        <img src="mp-1.jpg" alt="Mesures Physiques 1">
-                        <img src="mp-2.jpg" alt="Mesures Physiques 2">
+                        <img src="mp-1.jpg" alt="MP 1">
+                        <img src="mp-2.jpg" alt="MP 2">
                     </div>
                 </div>
-
                 <div class="timeline-item current">
                     <h3>BUT Informatique (Actuel)</h3>
-                    <p>Université Paris-Saclay, IUT d'Orsay. Développement logiciel et web.</p>
+                    <p>Université Paris-Saclay, IUT d'Orsay.</p>
                     <div class="image-grid">
-                        <img src="info-1.jpg" alt="Informatique 1">
-                        <img src="info-2.jpg" alt="Informatique 2">
+                        <img src="info-1.jpg" alt="Info 1">
+                        <img src="info-2.jpg" alt="Info 2">
                     </div>
                 </div>
             </div>
@@ -48,67 +66,79 @@
 
         <section class="section-presentation">
             <h2 class="section-title">Mes Compétences</h2>
-            <p class="section-subtitle">Un ensemble de compétences techniques et humaines construites à travers mes projets.</p>
-
             <h3 class="category-subtitle">Compétences <span>Techniques</span></h3>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">🧩</div>
                     <h4>Développement Web</h4>
                     <div class="tags">
-                        <span class="tag">HTML5</span> <span class="tag">CSS3</span>
-                        <span class="tag">REACT</span> <span class="tag">JavaScript</span>
-                        <span class="tag">PHP</span> <span class="tag">MySQL</span>
+                        <span class="tag">HTML5</span> <span class="tag">CSS3</span> <span class="tag">REACT</span> <span class="tag">JS</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
                     <h4>Programmation</h4>
                     <div class="tags">
-                        <span class="tag">Python</span> <span class="tag">C / C++</span>
-                        <span class="tag">JAVA</span> <span class="tag">Algorithmique</span>
-                        <span class="tag">Structures de données</span>
+                        <span class="tag">Python</span> <span class="tag">Java</span> <span class="tag">C++</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🗄️</div>
                     <h4>Data & Systèmes</h4>
                     <div class="tags">
-                        <span class="tag">SQL / MySQL</span> <span class="tag">Linux</span>
-                        <span class="tag">Bash</span>
+                        <span class="tag">SQL</span> <span class="tag">Linux</span> <span class="tag">Bash</span>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🔧</div>
-                    <h4>Méthodologie & Git</h4>
+                    <h4>Méthodologie</h4>
                     <div class="tags">
-                        <span class="tag">Git / GitHub</span> <span class="tag">Scrum</span>
-                        <span class="tag">Agilité</span>
+                        <span class="tag">Git</span> <span class="tag">Scrum</span> <span class="tag">Agile</span>
                     </div>
                 </div>
             </div>
 
             <h3 class="category-subtitle">Qualités <span>Humaines</span></h3>
             <div class="soft-skills-container">
-                <span class="tag-soft">Travail en équipe</span>
-                <span class="tag-soft">Leadership</span>
-                <span class="tag-soft">Communication</span>
-                <span class="tag-soft">Polyvalence</span>
-                <span class="tag-soft">Autonomie</span>
-                <span class="tag-soft">Résolution de problèmes</span>
-                <span class="tag-soft">Adaptabilité</span>
-            </div>
-
-            <h3 class="category-subtitle">Ma <span>Boîte à Outils</span></h3>
-            <div class="toolbox">
-                <div class="tool-item"><span>VS Code</span></div>
-                <div class="tool-item"><span>Git</span></div>
-                <div class="tool-item"><span>Terminal</span></div>
-                <div class="tool-item"><span>Figma</span></div>
-                <div class="tool-item"><span>Notion</span></div>
+                <span class="tag-soft">Travail en équipe</span> <span class="tag-soft">Adaptabilité</span> <span class="tag-soft">Autonomie</span>
             </div>
         </section>
 
         <hr class="separator">
 
-        </main>
+        <section class="section-presentation">
+            <h2 class="section-title">Centres d'intérêt</h2>
+            <div class="interest-block">
+                <div class="interest-img"><img src="tennis.jpg" alt="Tennis"></div>
+                <div class="interest-text">
+                    <h3>Le Tennis</h3>
+                    <p>Sport qui m'a appris la persévérance et la discipline.</p>
+                </div>
+            </div>
+            <div class="interest-block reverse">
+                <div class="interest-img"><img src="livre.jpg" alt="Littérature"></div>
+                <div class="interest-text">
+                    <h3>Littérature Anglophone</h3>
+                    <p>Passion qui nourrit ma curiosité et mon niveau d'anglais.</p>
+                </div>
+            </div>
+            <div class="interest-block">
+                <div class="interest-img"><img src="asso.jpg" alt="Association"></div>
+                <div class="interest-text">
+                    <h3>Engagement Associatif</h3>
+                    <p>Bénévole aux Restos du Cœur et à "Les Chelles de l'espoir". Coach sportif au foot.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bottom-bar">
+        <div class="footer-info">
+            <p>IUT d'Orsay - 13 avenue des sciences - 91190 Gif-sur-Yvette</p>
+            <p>Permis B <strong>|</strong> Mobilité : Île-de-France <strong>|</strong> Rythme : 2 jours entreprise / 3 jours IUT</p>
+        </div>
+    </footer>
+
+</body>
+</html>
