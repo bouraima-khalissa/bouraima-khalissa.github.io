@@ -92,7 +92,7 @@ body {
     margin: 50px 0; 
 }
 
-/* --- SECTION 1 : VIDÉO --- */
+/* --- SECTION 1 : VIDÉO --- 
 .video-container.large { 
     max-width: 1100px; /* Augmenté de 900px à 1100px pour un format cinéma */
     width: 100%;       /* Prend toute la largeur du conteneur si possible */
@@ -108,7 +108,7 @@ body {
     height: auto;      /* Garde le bon ratio de ta vidéo */
     display: block; 
 }
-
+*/
 /* --- SECTION 2 : PARCOURS (IMAGES AGRANDIES) --- */
 .academic-timeline { 
     display: flex; 
