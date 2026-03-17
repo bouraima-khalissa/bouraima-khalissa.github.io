@@ -1,169 +1,233 @@
-/* --- Variables et Base --- */
-:root {
-    --primary-color: #1a3a5a; 
+root {
+
+    --primary-color: #1a3a5a;
+
     --bg-color: #0b0b0b;      
+
     --text-color: #e0e0e0;
+
     --card-bg: #161616;       
+
     --transition: all 0.3s ease;
+
 }
 
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    font-family: 'Poppins', sans-serif; 
-}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+
 
 body { 
+
     background-color: var(--bg-color); 
+
     color: var(--text-color); 
+
     display: flex; 
+
     flex-direction: column; 
+
     min-height: 100vh; 
-    overflow-x: hidden;
+
 }
 
-/* --- BANDES (Identiques à ton accueil) --- */
-.top-bar { 
-    padding: 15px 60px; 
-    background-color: var(--primary-color);
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
 
-.bottom-bar { 
-    padding: 25px; 
-    background-color: var(--primary-color);
-    text-align: center; 
-    font-size: 0.85rem; 
-    margin-top: auto; 
-}
 
-.iut-logo { 
-    max-height: 45px; 
-    background-color: white; 
-    padding: 4px; 
-    border-radius: 4px; 
-}
+/* --- BANDES (Communes) --- */
 
-.home-btn { 
-    color: white; 
-    text-decoration: none; 
-    font-weight: 600; 
-    border: 1px solid white; 
-    padding: 5px 15px; 
-    border-radius: 20px; 
-    transition: var(--transition); 
-}
+.top-bar, .bottom-bar { background-color: var(--primary-color); color: white; }
 
-.home-btn:hover { 
-    background: white; 
-    color: var(--primary-color); 
-}
+.top-bar { padding: 15px 60px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
 
-/* --- CONTENU ÉLARGI --- */
-.presentation-content {
-    max-width: 1200px; /* Largeur augmentée (était à 900px) */
+.bottom-bar { padding: 25px; text-align: center; font-size: 0.85rem; margin-top: auto; }
+
+.iut-logo { max-height: 45px; background-color: white; padding: 4px; border-radius: 4px; }
+
+.home-btn { color: white; text-decoration: none; font-weight: 600; border: 1px solid white; padding: 5px 15px; border-radius: 20px; transition: var(--transition); }
+
+.home-btn:hover { background: white; color: var(--primary-color); }
+
+
+
+/* --- GRILLE DE PROJETS --- */
+
+.projets-content {
+
+    max-width: 1200px;
+
     margin: 0 auto;
-    padding: 60px 20px;
+
+    padding: 40px 20px;
+
 }
+
+
 
 .section-title {
+
     color: var(--primary-color);
+
     text-align: center;
+
     margin-bottom: 50px;
-    font-size: 2.8rem;
-    font-weight: 700;
+
+    font-size: 2.5rem;
+
 }
 
-/* --- PROJETS LES UNS SUR LES AUTRES --- */
-.academic-timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 50px; /* Plus d'espace entre les blocs */
-}
 
-.timeline-item {
-    background: var(--card-bg);
-    padding: 40px; /* Plus d'espace intérieur */
-    border-radius: 20px;
-    border: 1px solid #222;
-    transition: var(--transition);
-}
 
-.timeline-item:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-}
+.projects-grid {
 
-.timeline-item h3 {
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.timeline-item p {
-    line-height: 1.8;
-    margin-bottom: 15px;
-    font-size: 1.05rem;
-}
-
-/* --- GRILLE D'IMAGES AGRANDIES --- */
-.image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 30px;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+
 }
 
-.image-grid img {
-    width: 100%;
-    height: 350px; /* Hauteur augmentée (était à 150px) */
-    object-fit: cover; /* Garde le bon ratio sans déformer */
-    border-radius: 12px;
-    border: 1px solid #333;
-}
 
-/* --- COMPÉTENCES ET RESTE --- */
-.category-subtitle {
-    margin: 40px 0 20px;
-    font-size: 1.5rem;
-}
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
+.project-card {
 
-.skill-card {
     background: var(--card-bg);
-    padding: 25px;
+
     border-radius: 15px;
+
+    overflow: hidden;
+
     border: 1px solid #222;
-    text-align: center;
+
+    transition: var(--transition);
+
+    display: flex;
+
+    flex-direction: column;
+
 }
+
+
+
+.project-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--primary-color);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+}
+
+
+
+.project-image {
+
+    height: 200px;
+
+    background: #222;
+
+}
+
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+
+.project-info {
+
+    padding: 20px;
+
+    flex-grow: 1;
+
+}
+
+
+
+.project-date {
+
+    font-size: 0.8rem;
+
+    color: var(--primary-color);
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+}
+
+
+
+.project-info h3 {
+
+    margin: 10px 0;
+
+    color: white;
+
+}
+
+
+
+.project-info p {
+
+    font-size: 0.9rem;
+
+    color: #bbb;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+}
+
+
 
 .tag {
-    background: rgba(26, 58, 90, 0.3);
-    color: #fff;
-    padding: 5px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    display: inline-block;
-    margin: 4px;
+
+    background: rgba(26, 58, 90, 0.2);
+
+    color: #aaa;
+
+    border: 1px solid #333;
+
+    padding: 4px 10px;
+
+    border-radius: 5px;
+
+    font-size: 0.75rem;
+
 }
 
-/* --- MOBILE --- */
-@media (max-width: 900px) {
-    .presentation-content { padding: 30px 15px; }
-    .image-grid { grid-template-columns: 1fr; }
-    .image-grid img { height: 250px; } /* Un peu plus petit sur mobile */
-    .top-bar { padding: 15px 25px; }
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .top-bar { padding: 15px 20px; }
+
+    .projects-grid { grid-template-columns: 1fr; }
+
 }
