@@ -182,9 +182,3 @@ body {
     .profile-pic { width: 240px; height: 300px; }
 }
 
-@media (max-width: 900px) {
-    .main-title {
-        margin-bottom: 0;
-        order: -1; /* S'assure qu'il reste en haut même en colonne */
-    }
-}
