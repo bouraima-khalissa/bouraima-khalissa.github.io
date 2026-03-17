@@ -1,14 +1,14 @@
-/* --- GRILLE DE PROJETS MODIFIÉE POUR MODE PAYSAGE --- */
+/* --- GRILLE DE PROJETS (Une seule colonne, format paysage) --- */
 .projets-content {
-    max-width: 1000px; /* Réduit un peu pour un meilleur rendu en liste */
+    max-width: 900px; /* On réduit la largeur max pour que la liste soit élégante */
     margin: 0 auto;
     padding: 40px 20px;
 }
 
 .projects-grid {
     display: flex;
-    flex-direction: column; /* On empile les cartes horizontalement */
-    gap: 40px;
+    flex-direction: column; /* Force l'empilement vertical */
+    gap: 30px; /* Espace entre les projets */
 }
 
 .project-card {
@@ -18,24 +18,21 @@
     border: 1px solid #222;
     transition: var(--transition);
     
-    /* Changement clé : alignement horizontal */
-    display: flex; 
+    /* Pour mettre l'image à gauche et le texte à droite */
+    display: flex;
     flex-direction: row; 
-    align-items: stretch;
-    min-height: 250px; /* Optionnel : pour garantir une belle hauteur */
+    width: 100%; /* Prend toute la largeur de la colonne */
+    min-height: 250px;
 }
 
 .project-card:hover {
-    transform: translateX(10px); /* Petit décalage vers la droite au lieu de vers le haut */
+    transform: translateX(10px); /* Petit décalage vers la droite */
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .project-image {
-    width: 40%; /* L'image prend 40% de la largeur de la carte */
-    height: auto; /* La hauteur s'adapte à la carte */
-    background: #222;
-    flex-shrink: 0; /* Empêche l'image de rétrécir */
+    width: 35%; /* L'image occupe 35% de la largeur de la carte */
+    flex-shrink: 0; /* Empêche l'image de s'écraser */
 }
 
 .project-image img {
@@ -45,27 +42,22 @@
 }
 
 .project-info {
-    padding: 30px;
+    padding: 25px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centre le texte verticalement par rapport à l'image */
+    justify-content: center; /* Centre le texte verticalement */
 }
 
-/* Responsive : On repasse en mode portrait sur mobile pour que ça reste lisible */
+/* --- RESPONSIVE : Mobile --- */
 @media (max-width: 768px) {
-    .top-bar { padding: 15px 20px; }
-    
     .project-card {
-        flex-direction: column; /* Repasse l'image au-dessus sur petit écran */
+        flex-direction: column; /* Sur mobile, on repasse l'image au-dessus */
+        min-height: auto;
     }
     
     .project-image {
         width: 100%;
-        height: 200px;
-    }
-    
-    .project-card:hover {
-        transform: translateY(-10px);
+        height: 180px;
     }
 }
