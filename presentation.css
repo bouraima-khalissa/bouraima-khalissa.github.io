@@ -92,23 +92,7 @@ body {
     margin: 50px 0; 
 }
 
-/* --- SECTION 1 : VIDÉO --- 
-.video-container.large { 
-    max-width: 1100px; /* Augmenté de 900px à 1100px pour un format cinéma */
-    width: 100%;       /* Prend toute la largeur du conteneur si possible */
-    margin: 0 auto; 
-    border-radius: 20px; 
-    overflow: hidden; 
-    box-shadow: 0 25px 50px rgba(0,0,0,0.7); /* Ombre plus profonde pour le relief */
-    border: 1px solid #333;
-}
 
-.video-container video { 
-    width: 100%; 
-    height: auto;      /* Garde le bon ratio de ta vidéo */
-    display: block; 
-}
-*/
 /* --- SECTION 2 : PARCOURS (IMAGES AGRANDIES) --- */
 .academic-timeline { 
     display: flex; 
