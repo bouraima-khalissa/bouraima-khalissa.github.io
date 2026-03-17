@@ -71,6 +71,24 @@ body {
 } 
 
 /* --- Section Héro --- */
+
+/* --- Nouveau titre Portfolio --- */
+.hero-section {
+    flex-wrap: wrap; /* Permet au titre de prendre toute la largeur au-dessus */
+    align-content: center;
+}
+
+.main-title {
+    width: 100%; /* Force le titre à prendre toute la ligne */
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    opacity: 0.8;
+    font-weight: 300;
+}
 .hero-section {
     flex: 1;
     display: flex;
@@ -162,4 +180,11 @@ body {
     }
     .top-bar { padding: 10px 20px; }
     .profile-pic { width: 240px; height: 300px; }
+}
+
+@media (max-width: 900px) {
+    .main-title {
+        margin-bottom: 0;
+        order: -1; /* S'assure qu'il reste en haut même en colonne */
+    }
 }
