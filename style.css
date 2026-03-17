@@ -1,167 +1,329 @@
 /* --- Variables et Base --- */
+
 :root {
+
     --primary-color: #1a3a5a; /* Bleu marine des bandes */
+
     --bg-color: #0b0b0b;      
+
     --text-color: #e0e0e0;
+
     --card-bg: #161616;       
+
     --transition: all 0.3s ease;
+
 }
+
+
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
     font-family: 'Poppins', sans-serif;
+
 }
+
+
 
 body {
+
     background-color: var(--bg-color);
+
     color: var(--text-color);
+
     display: flex;
+
     flex-direction: column;
+
     min-height: 100vh;
+
     overflow-x: hidden;
+
 }
+
+
 
 /* --- Bandes (Haut et Bas identiques) --- */
+
 /* --- BANDES (Top & Bottom) --- */
+
 .top-bar, .bottom-bar { 
+
     background-color: var(--primary-color); 
+
     color: white; 
+
 }
+
+
 
 .top-bar {
+
     padding: 15px 60px;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
+
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
 }
+
+
 
 .bottom-bar { 
+
     padding: 25px; 
+
     text-align: center; 
+
     font-size: 0.85rem; 
+
     margin-top: auto; 
+
 }
+
+
 
 .iut-logo { 
+
     max-height: 45px; 
+
     background-color: white; 
+
     padding: 4px; 
+
     border-radius: 4px; 
+
 }
+
+
 
 .home-btn { 
+
     color: white; 
+
     text-decoration: none; 
+
     font-weight: 600; 
+
     border: 1px solid white;
+
     padding: 5px 15px;
+
     border-radius: 20px;
+
     transition: var(--transition);
+
 }
 
+
+
 .home-btn:hover {
+
     background: white;
+
     color: var(--primary-color);
+
 } 
+
+
 
 /* --- Section Héro --- */
 
 .hero-section {
+
     flex: 1;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 40px;
+
     gap: 80px; /* Réduit un peu l'écart central */
+
     max-width: 1300px;
+
     margin: 0 auto;
+
 }
+
+
 
 /* Profil */
+
 .profile-container {
+
     flex: 1.2;
+
     text-align: center;
+
 }
+
+
 
 .profile-pic {
+
     width: 280px; /* Légèrement réduit */
+
     height: 360px;
+
     border-radius: 20px;
+
     border: 5px solid var(--primary-color); 
+
     object-fit: cover;
+
     margin-bottom: 20px;
+
     box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+
 }
+
+
 
 .profile-container h1 {
+
     font-size: 3rem;
+
     color: var(--primary-color); 
+
     margin-bottom: 15px;
+
     font-weight: 700;
+
 }
+
+
 
 .profile-desc {
+
     font-size: 1.1rem;
+
     color: #bbb;
+
     font-weight: 400;
+
     max-width: 500px;
+
     margin: 0 auto;
+
     line-height: 1.6;
+
 }
+
+
 
 /* --- Boutons à droite (Taille réduite) --- */
+
 .nav-categories {
+
     flex: 0.8;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 15px; /* Espace entre les boutons réduit */
+
 }
+
+
 
 .category-card {
+
     background-color: var(--card-bg);
+
     padding: 20px 25px; /* Padding réduit (était à 35px) */
+
     border-radius: 12px;
+
     text-decoration: none;
+
     border: 1px solid #222;
+
     transition: var(--transition);
+
 }
+
+
 
 .category-card h3 {
+
     font-size: 1.3rem; /* Taille du titre réduite (était à 1.6rem) */
+
     margin-bottom: 5px;
+
     color: white; 
+
     transition: var(--transition);
+
 }
+
+
 
 .category-card:hover h3 {
+
     color: var(--primary-color);
+
 }
+
+
 
 .category-card p {
+
     color: #777;
+
     font-size: 0.85rem; /* Texte plus petit */
+
 }
+
+
 
 .category-card:hover {
+
     transform: translateX(10px);
+
     border-color: var(--primary-color);
+
     background-color: #1c1c1c;
+
 }
+
+
 
 /* --- Mobile --- */
-@media (max-width: 900px) {
-    .hero-section {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
-    }
-    .top-bar { padding: 10px 20px; }
-    .profile-pic { width: 240px; height: 300px; }
-}
 
+@media (max-width: 900px) {
+
+    .hero-section {
+
+        flex-direction: column;
+
+        padding: 40px 20px;
+
+        text-align: center;
+
+    }
+
+    .top-bar { padding: 10px 20px; }
+
+    .profile-pic { width: 240px; height: 300px; }
+
+} 
