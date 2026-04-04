@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1768818152 source:c:\users\abour\downloads\s102_projet_codeblocks\s102\src\image.cpp
+	<SDL_image.h>
+	<exception>
+	"Image.h"
+
+1768818152 source:c:\users\abour\downloads\s102_projet_codeblocks\s102\src\main.cpp
+	<vector>
+	"Moteur.h"
+	"Image.h"
+
+1768818152 source:c:\users\abour\downloads\s102_projet_codeblocks\s102\src\moteur.cpp
+	<SDL_image.h>
+	"Moteur.h"
+
